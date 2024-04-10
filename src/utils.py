@@ -1,13 +1,16 @@
+from typing import Any, Dict
+
 import yaml
-from typing import Dict, Any
 
 
 def read_config(config_path: str) -> Dict[str, Any]:
-    with open(config_path) as file:
+    with open(config_path, "r") as file:
         return yaml.safe_load(file)
 
 
-def update_state(state: Dict[str, Any], state_file: str, logfile:str, lines_read: int) -> Dict[str, Any]:
+def update_state(
+    state: Dict[str, Any], state_file: str, logfile: str, lines_read: int
+) -> Dict[str, Any]:
     if state["last_logfile_read"] == "":
         state["last_logfile_read"] = logfile
     state["read_from_line"] += lines_read
