@@ -6,8 +6,8 @@ from typing import List
 
 import pickledb
 
-from scanner.base import Scanner
-from utils import read_config
+from logfile_scanner.scanner.base import Scanner
+from logfile_scanner.utils import read_config
 
 vlc_settings_file = os.environ.get("VLC_SETTINGS_FILE", "scanner/vlc_settings.yml")
 

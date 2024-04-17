@@ -4,6 +4,14 @@ version = "0.1.0"
 description = "a script for generic logfile scanning. It scans, finds what you want and does what you want with it"
 authors = ["Fabian Guevara <ricardo.fabian.guevara@gmail.com>"]
 readme = "README.md"
+packages = [
+    { include = "logfile_scanner" },
+#    { include = "logfile_scanner/scanner/*.py" },
+]
+include = [
+    { path = "logfile_scanner/devenv_files/*.yml" },
+    { path = "logfile_scanner/devenv_files/vlc_logs_test" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -11,6 +19,8 @@ PyYAML = "6.0.1"
 pre-commit = "^3.7.0"
 pickledb = "^0.9.2"
 
+[tool.poetry.scripts]
+vlc_scan = 'main:main'
 
 [build-system]
 requires = ["poetry-core"]
