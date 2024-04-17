@@ -1,0 +1,2 @@
+logfile: "./devenv_files/vlc_logs_test"
+encoding: "utf-8-sig"

@@ -1,0 +1,21 @@
+20:23:56,793 root INFO reading config from ./devenv_files/settings.yml
+20:24:27,670 root INFO reading state from ./devenv_files/state.yml
+20:25:23,563 root INFO reading log file from line 0
+20:26:07,411 root INFO found 20240328_150813.mp4
+20:26:28,165 root INFO found 20240328_150813.mp4
+20:26:44,377 root INFO 4 lines read. Updating state file
+20:28:25,493 root INFO reading config from ./devenv_files/settings.yml
+20:28:39,413 root INFO reading state from ./devenv_files/state.yml
+20:37:12,4 root INFO reading config from ./devenv_files/settings.yml
+20:37:17,190 root INFO reading state from ./devenv_files/state.yml
+20:37:35,148 root INFO reading config from ./devenv_files/settings.yml
+20:37:44,145 root INFO reading state from ./devenv_files/state.yml
+20:37:51,539 root INFO reading config from ./devenv_files/settings.yml
+20:37:51,543 root INFO reading state from ./devenv_files/state.yml
+20:39:12,969 root INFO reading config from ./devenv_files/settings.yml
+20:39:12,972 root INFO reading state from ./devenv_files/state.yml
+20:39:17,295 root WARNING state file ./devenv_files/state.yml not found. Creating default state
+20:39:36,18 root INFO reading log file from line 0
+20:39:48,492 root INFO found 20240328_150813.mp4
+20:39:50,424 root INFO found 20240328_150813.mp4
+20:39:50,429 root INFO 4 lines read. Updating state file

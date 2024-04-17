@@ -10,7 +10,6 @@ from scanner.base import Scanner
 from utils import read_config
 
 vlc_settings_file = os.environ.get("VLC_SETTINGS_FILE", "scanner/vlc_settings.yml")
-LOGGER = logging.getLogger("vlc_scanner")
 
 
 class VLCScanner(Scanner):
@@ -28,7 +27,7 @@ class VLCScanner(Scanner):
                 file = os.path.basename(
                     urllib.parse.unquote(line[str_from:str_to], encoding=self.encoding)
                 )
-                LOGGER.info(f"found {file}")
+                logging.info(f"found {file}")
                 count = db.get(file)
                 db.set(file, count + 1)
         db.dump()
