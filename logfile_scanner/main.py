@@ -2,8 +2,8 @@ import argparse
 import logging
 from os import environ
 
-from scanner.vlc import VLCScanner
-from utils import read_config, read_state, setup_logger, update_state
+from logfile_scanner.scanner.vlc import VLCScanner
+from logfile_scanner.utils import read_config, read_state, setup_logger, update_state
 
 config_file_env = environ.get("CONFIG_FILE", "settings.yml")
 state_file_env = environ.get("STATE_FILE", "settings.yml")
