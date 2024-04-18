@@ -7,7 +7,6 @@ from typing import List
 import pickledb
 
 from logfile_scanner.scanner.base import Scanner
-from logfile_scanner.utils import read_config
 
 
 class VLCScanner(Scanner):
