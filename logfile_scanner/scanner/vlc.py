@@ -13,8 +13,7 @@ from logfile_scanner.utils import read_config
 class VLCScanner(Scanner):
     def __init__(self, db_path: str, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        vlc_settings = read_config(db_path)
-        self.db_path = vlc_settings["db_path"]
+        self.db_path = db_path
 
     def _process(self, lines: List[str]):
         db = pickledb.load(self.db_path, False)

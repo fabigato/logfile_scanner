@@ -6,7 +6,6 @@ authors = ["Fabian Guevara <ricardo.fabian.guevara@gmail.com>"]
 readme = "README.md"
 packages = [
     { include = "logfile_scanner" },
-#    { include = "logfile_scanner/scanner/*.py" },
 ]
 include = [
     { path = "logfile_scanner/devenv_files/*.yml" },
