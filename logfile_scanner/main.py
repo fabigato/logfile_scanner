@@ -43,7 +43,10 @@ def main():
         read_from = state["read_from_line"]
 
     scanner = VLCScanner(
-        log_file=config["logfile"], read_from=read_from, encoding=config["encoding"]
+        db_path=config["db_path"],
+        log_file=config["logfile"],
+        read_from=read_from,
+        encoding=config["encoding"],
     )
     lines_read = scanner.scan()
 

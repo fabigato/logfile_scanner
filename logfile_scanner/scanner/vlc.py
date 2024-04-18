@@ -9,13 +9,11 @@ import pickledb
 from logfile_scanner.scanner.base import Scanner
 from logfile_scanner.utils import read_config
 
-vlc_settings_file = os.environ.get("VLC_SETTINGS_FILE", "scanner/vlc_settings.yml")
-
 
 class VLCScanner(Scanner):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, db_path: str, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        vlc_settings = read_config(vlc_settings_file)
+        vlc_settings = read_config(db_path)
         self.db_path = vlc_settings["db_path"]
 
     def _process(self, lines: List[str]):
