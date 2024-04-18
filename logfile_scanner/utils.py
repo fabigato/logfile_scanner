@@ -49,7 +49,7 @@ def get_config(args_config: str) -> Dict[str, Any]:
         config = read_config(config_path=os.environ.get("CONFIG_FILE"))
     else:
         config = dict()
-        save_path = Path(__file__) / "settings.yml"
+        save_path = Path(__file__).parent / "settings.yml"
         with open(save_path, "w") as file:
             yaml.dump(config, file)
         logging.info(f"created default config and saved it to {save_path}")
@@ -62,8 +62,8 @@ def _fix_config(config: Dict[str, Any]) -> Dict[str, Any]:
         config["encoding"] = "utf-8-sig"
     if config.get("state_file") is None:
         logging.info("adding default state_file to settings file")
-        config["state_file"] = str(Path(__file__) / "state.yml")
+        config["state_file"] = str(Path(__file__).parent / "state.yml")
     if config.get("db_path") is None:
         logging.info("adding default database path to settings file")
-        config["db_path"] = str(Path(__file__) / "freq.db")
+        config["db_path"] = str(Path(__file__).parent / "freq.db")
     return config
